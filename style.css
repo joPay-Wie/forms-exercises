@@ -1,0 +1,128 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(211, 211, 211);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+label{
+    margin-top: 5px;
+}
+
+input {
+    background: white;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+input[type = submit] {
+    width: 50%;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    margin-top: 15px;
+}
+/* 
+input::placeholder {
+    color: rgb(202, 85, 1);
+}
+
+.box{
+    margin-top: 50px;
+    background-color: aquamarine;
+    width: 30%;
+    height: 30%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+}
+
+ul{
+    font-size: 19px;
+    font-style: italic;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75%;
+    background-color: pink;
+    margin-top: 15px;
+}
+
+button {
+    width: 60%;
+    height: 20px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    margin-top: 15px;
+    border-radius: 30px;
+}
+
+select {
+    margin-top: 10px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: lightslategray;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 6px 0px, rgba(0, 0, 0, 0.1) 0px 8px 8px 0px, rgba(0, 0, 0, 0.1) 0px 16px 16px 0px, rgba(0, 0, 0, 0.15) 8px 32px 32px 0px, rgba(0, 0, 0, 0.15) 8px 64px 64px 0px; 
+    margin-top: 15px;
+}
+
+.gatitos, .perritos, .morfi{
+    display: flex;
+    flex-direction: row;
+}
+
+/* ejercicio 8 */
+
+img {
+    max-width: 100px;
+}
+
+
+.images-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.displayFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.displayNone {
+    display: none;
+} 
+
+
+/* ejercicio 9

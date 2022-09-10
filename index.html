@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
+
 </head>
 <body>
     <!-- <form action="">
@@ -153,7 +155,7 @@
     <img src="https://librosostenibilidad.files.wordpress.com/2017/03/paisaje-cultura-sostenibilidad.jpg?w=2000&h=1365&crop=1" alt="Lago y montaña">
 </div> -->
 
-<form>
+<!-- <form>
     <label for="animales"> Animales </label>
     <input type="checkbox" name="animales" id="animales" value="animales" checked>
     <label for="comida"> Comidas y bebidas </label>
@@ -177,7 +179,137 @@
     <img src="https://www.cronista.com/files/image/346/346068/610b207323724.jpg" alt="Vino tinto en copa" class="image comida" data-categoria="comida">
     <img src="https://ilusionviajera.com/wp-content/uploads/2020/06/Pueblos-mas-bonitos-de-Suiza.jpg" alt="Paisaje bonito de Suiza" class="image paisajes" data-categoria="paisajes">
     <img src="https://librosostenibilidad.files.wordpress.com/2017/03/paisaje-cultura-sostenibilidad.jpg?w=2000&h=1365&crop=1" alt="Lago y montaña" class="image paisajes" data-categoria="paisajes">
-</div>
+</div> -->
+
+<!-- <select class="form-select" id="select" aria-label="Default select example">
+    <option value="Todos">Todos</option>
+    <option value="Rojo">Rojo</option>
+    <option value="Azul">Azul</option>
+</select>
+<button class="btn btn-primary" id="btn">Filtrar</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Equipo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Rol</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Zona</th>
+      </tr>
+    </thead>
+    <tbody id="table">
+      
+    </tbody>
+  </table> -->
+
+
+
+  <!-- <form action="">
+    <p> 1. ¿Qué tan rápido solucionamos tu problema?
+        <div>
+        <input type="radio" name="solucion" class="solucion" checked value="1" id="demoraron" /> <label for="demoraron"> Demoraron mucho</label>
+        <br>
+        <input type="radio" name="solucion" class ="solucion" value="2" id="recibido"/> <label for="recibido"> Lo recibí en el tiempo estimado </label>
+        <br>
+        <input type="radio" name="solucion" class = "solucion" value="3" id="rapido"/> <label for="rapido"> Super rápido </label>
+        </div>
+    </p>
+    <p> 2. ¿Cómo recibiste el producto?
+        <div>
+        <input type="radio" name="recepcion" class="recepcion"checked value="1" id="desperfecto"/> <label for="desperfecto"> Tuvo un desperfecto</label>
+        <br>
+        <input type="radio" name="recepcion" class="recepcion" value="2" id="igual" /> <label for="igual"> Era tal cual la publicación</label>
+        <br>
+        <input type="radio" name="recepcion" class="recepcion" value="3" id="supero"/> <label for="supero"> Superó mis expectativas </label>
+        </div>
+    </p>
+    <p> 3. ¿Cómo calificarías el asesoramiento de nuestros representantes?
+        <div>
+        <input type="radio" name="asesoramiento" class="asesoramiento" checked value="1" id="malo"/> <label for="malo"> No supo responder adecuadamente mis preguntas</label>
+        <br>
+        <input type="radio" name="asesoramiento" class="asesoramiento" value="2" id="respondio"/> <label for="respondio"> El representante respondió adecuadamente</label>
+        <br>
+        <input type="radio" name="asesoramiento" class="asesoramiento" value="3" id="excelente" /> <label for="excelente"> Recibí un excelente asesoramiento </label>
+        </div>
+    </p>
+    <p> 4. ¿Recomendarías nuestro portal a otro usuario?
+        <div>
+        <input type="radio" name="recomendacion" class="recomendacion" checked value="1" id="no" /> <label for="no"> No lo creo</label>
+        <br>
+        <input type="radio" name="recomendacion" class="recomendacion" value="2" id="si"/> <label for="si"> Solo para casos puntuales </label>
+        <br>
+        <input type="radio" name="recomendacion" class="recomendacion" value="3" id="claro"/> <label for="claro"> ¡Si, por supuesto! </label>
+        </div>
+    </p>
+</form>
+
+<button id="btn">Enviar</button> -->
+
+
+
+<!-- <form action="">
+    <label for="numero">Ingrese el número de su tarjeta de crédito</label>
+    <input type="number" name="numero" id="numero" placeholder="Ingrese el número">
+
+    <p class="errorI"></p>
+
+    <select name="tarjeta" id="tarjeta" disabled>
+        <option value="1">Visa</option>
+        <option value="2">Mastercard</option>
+    </select>
+    <p class="errorII"></p>
+    <label for="nombre">Nombre del titular</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Ingrese el nombre">
+
+    <label for="ccv">Ingrese el CCV</label>
+    <input type="number" name="ccv" id="ccv" placeholder="Ingrese el CCV" disabled>
+
+    <input type="submit" value="ENVIAR">
+    <p class="errorIII"> </p>
+
+</form> -->
+
+
+<form action="">
+    <div>
+        <label for="name">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+        <small id="errorNombre"></small>
+    </div>
+    <div>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+        <small id="errorApellido"></small>
+    </div> 
+    <div>
+        <label for="dni">DNI</label>
+        <input type="number" name="dni" id="dni" placeholder="Ingrese su DNI">
+        <small id="errorDni"></small>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Ingrese su mail"
+        id="email"/>
+        <small id="errorEmail"></small>
+    </div>
+    <div>
+        <label for="password">Constraseña</label>
+        <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" />
+        <small id="errorPassword"></small>
+    </div>
+    <div>
+        <label for="repeatPassword">Repeat Password:</label>
+        <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repita su contraseña">
+        <small id="errorRepeatPassword"></small>
+    </div>
+    <div class="terms">
+        <label for="terms" class="terms">Acepto terminos y condiciones</label>
+        <input type="checkbox" name="terms" id="terms">
+        <small id="errorTerms"></small>
+    </div>
+    <input type="submit" value="Enviar" id="btn">
+    </form>
+
     <!-- <script src="data.js"> </script>  -->
     <script src="script.js"></script>
 </body>

@@ -96,8 +96,42 @@ const $$ = (selector) => document.querySelectorAll(selector);
 //     }
 // })
 
-
 // ejercicio 6
+
+/* const $inputValor = $("#valor")
+let $unidadValor = $("#unidadValor")
+let $unidadConvertir = $("#unidadConvertir")
+const $btn = $("#btn")
+let $resultado = $("#resultado")
+
+const convertir = () => {
+    let cuenta = (Number($inputValor.value) * Number($unidadValor.value)) / Number($unidadConvertir.value)
+    return cuenta
+}
+
+$inputValor.addEventListener("change", () => {
+    $resultado.innerHTML = `El resultado es: ${convertir()}`
+})
+
+$unidadValor.addEventListener("change", () => {
+    $resultado.innerHTML = `El resultado es: ${convertir()}`
+})
+
+$unidadConvertir.addEventListener("change", () => {
+    $resultado.innerHTML = `El resultado es: ${convertir()}`
+})
+
+$btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    let valor1 = $unidadValor.value
+    let valor2 = $unidadConvertir.value
+    $unidadValor.value = valor2
+    $unidadConvertir.value = valor1
+    $resultado.innerHTML = `El resultado es: ${convertir()}`
+}) */
+
+
+// ejercicio 7
 
 // const $url = $("#url")
 // const $title = $("#title")
@@ -134,7 +168,7 @@ const $$ = (selector) => document.querySelectorAll(selector);
 // }
 
 
-// ejercicio 7
+// ejercicio 8
 
 // const $select = $("select")
 
@@ -176,7 +210,7 @@ const $$ = (selector) => document.querySelectorAll(selector);
 //     }
 // })
 
-// ejercicio 8
+// ejercicio 9
 
 // variables generales
 // const $word = $("#word") // id del input
@@ -250,7 +284,7 @@ const $$ = (selector) => document.querySelectorAll(selector);
 // })
 
 
-// ejercicio 9
+// ejercicio 10
 
 // const $$images = $$(".image")
 
@@ -291,6 +325,8 @@ const $$ = (selector) => document.querySelectorAll(selector);
 //     })
 // }
 
+// segunda opción, no funciona
+
 // const $comida = $("#comida")
 // const $paisajes = $("#paisajes")
 // const $animales = $("#animales")
@@ -325,3 +361,323 @@ const $$ = (selector) => document.querySelectorAll(selector);
         
 //     })
 // }
+
+
+
+
+// ejercicio de tabla en clase
+
+// // data
+// const players = [
+//     ["Rojo", "Faker", "Mid", 21, "Korea"],
+//     ["Azul", "Doublelift", "ADC", 23, "Korea"],
+//     ["Azul", "Smeb", "Top", 22, "Korea"],
+//     ["Rojo", "Deft", "ADC", 21, "Korea"],
+//     ["Rojo", "Perkz", "Top", 25, "Europa"],
+//     ["Rojo", "Armani", "Support", 21, "Korea"],
+//     ["Azul", "Mata", "Support", 18, "Korea"],
+//     ["Rojo", "Quintero", "Mid", 21, "Korea"],
+//     ["Azul", "Mantarraya", "Top", 25, "LAS"],
+//     ["Azul", "xPeke", "Mid", 27, "Europa"]
+// ]
+
+// // variables
+// const $table = $("#table")
+// const $btn = $("#btn")
+// const $select = $("#select")
+
+// // funciones
+
+// const cleanTable = () => {
+//     $table.innerHTML = ""
+// }
+
+// const filterTeams = (selection) => {
+//     let selectedTeam = []
+
+//     if (selection === "Todos") {
+//         selectedTeam = players 
+//     }
+
+//     for (const player of players) {
+
+//         if (player[0] === selection) {
+//             selectedTeam.push(player)
+//         }
+
+//     }
+//     return selectedTeam
+// }
+
+// const generateTable = () => {
+//     const team = filterTeams($select.value)
+//     // antes de generarse la tabla, que se limpie
+//     cleanTable()
+//     for (const player of team) {
+//         const tr = document.createElement("tr") // CREA EL ELEMENTO EN EL DOCUMENTO (NO INDICA AÚN DONDE)
+//         for (const element of player) {
+//             tr.innerHTML += `<td> ${element} </td>`
+//         }
+//         $table.appendChild(tr) // INDICA DÓNDE SE AGREGA EL ELEMENTO
+//     }
+    
+// }
+
+// generateTable()
+
+// // events
+
+// $btn.addEventListener("click", generateTable)
+
+
+
+
+
+// ejercicio encuesta satisfacción
+
+// const $solucion = $$(".solucion")
+// const $recepcion = $$(".recepcion")
+// const $asesoramiento = $$(".asesoramiento")
+// const $recomendacion = $$(".recomendacion")
+// const $btn = $("#btn")
+
+// const guardarInfo = (array) =>{
+//     for(const respuesta of array){
+//         if(respuesta.checked){
+//             return Number(respuesta.value)
+//         }
+//     }
+// }
+
+// $btn.addEventListener("click", (e) => {
+//     e.preventDefault()
+//     let suma = guardarInfo($solucion) + guardarInfo($recepcion) + guardarInfo($asesoramiento) + guardarInfo($recomendacion)
+//     if(suma <= 4){
+//         alert (`Sumamente insatisfecho`)
+//     } 
+//     if(suma >= 5 && suma <= 6 ){
+//         alert (`Insatisfecho`)
+//     }
+//     if(suma > 6 && suma <= 8 ){
+//         alert (`Conforme`)
+//     }
+//     if(suma > 8 && suma <= 10 ){
+//         alert (`Satisfecho`)
+//     }
+//     if(suma >= 11 && suma === 12  ){
+//         alert (`Muy satisfecho`)
+//     }
+//     })
+
+
+
+
+// ejercicio tarjeta
+
+// variables
+
+// const $numero = $("#numero")
+// const $tarjeta = $("#tarjeta")
+// const $nombre = $("#nombre")
+// const $ccv = $("#ccv")
+// const $errorI = $(".errorI")
+// const $errorII = $(".errorII")
+// const $form = $("form")
+
+// let numeroTarjeta
+
+// // regex patterns
+
+// const namePattern = new RegExp("^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$")
+// const numberPatternVisa = new RegExp('^[0-9]{3}$')
+// const numberPatternMasterCard = new RegExp('^[0-9]{4}$')
+
+// let validateName, validateNumber
+// const validateFields = () => {
+//     validateName = namePattern.test($nombre.value)
+//     if ($tarjeta.value === "2") validateNumber = numberPatternMasterCard.test($ccv.value)
+//     if ($tarjeta.value === "1") validateNumber = numberPatternVisa.test($ccv.value)
+// }
+
+
+// // events
+
+// $numero.addEventListener("blur", () =>{
+//     if($numero.value.length !== 16){
+//         $numero.style.background = "red"
+//         $errorI.innerHTML = "Error. La tarjeta debe contener 16 caracteres"
+//         $form.reset()
+//     } else {
+//         $numero.style.background = ""
+//         $errorI.innerHTML = ""
+//         numeroTarjeta = $numero.value
+//     }
+// });
+
+
+// $numero.addEventListener("change", () => {
+//         $errorII.innerHTML = ""
+//         if($numero.value.charAt(0) === "5"){
+//             $tarjeta.value = "2"
+//             $ccv.removeAttribute("disabled")
+//         }
+//         else if($numero.value.charAt(0) === "4" || $numero.value.charAt(0) === "3"){
+//             $tarjeta.value = "1"
+//             $ccv.removeAttribute("disabled")
+//         } else {
+//             $errorII.innerHTML = "el número ingresado es erróneo"
+//         }
+// })
+
+// $nombre.addEventListener("change", () => {
+//     validateFields()
+//     if (!validateName) {
+//         $nombre.style.background = "red"
+
+//     } else {
+//         $nombre.style.background = ""
+//     }
+// })
+
+// $ccv.addEventListener("change", () => {
+//     validateFields()
+//     if (!validateNumber) {
+//         $ccv.style.background = "red"
+//     } else {
+//         $ccv.style.background = ""
+//     }
+// })
+
+
+
+// ejercicio registro
+
+// variables
+const $nombre = $("#nombre")
+const $apellido = $("#apellido") 
+const $dni = $("#dni")
+const $email = $("#email")
+const $password = $("#password")
+const $repeatPassword = $("#repeatPassword")
+const $terms = $("#terms")
+const $btn = $("#btn")
+let $errorNombre = $("#errorNombre")
+let $errorApellido = $("#errorApellido")
+let $errorDni = $("#errorDni")
+let $errorEmail = $("#errorEmail")
+let $errorPassword = $("#errorPassword")
+let $errorRepeatPassword = $("#errorRepeatPassword")
+let $errorTerms = $("#errorTerms")
+
+
+// funciones de validación (regex patterns)
+const esNombreValido = (nombre) => {
+    const regex = /\b([a-zA-ZÀ-ÿ][-,a-z.']*)/
+    let booleanoNombre = regex.test(nombre)
+    if (booleanoNombre) {
+        $errorNombre.innerHTML = ""
+        return true
+    }
+    else {
+        $errorNombre.innerHTML = "El campo nombre solo puede contener texto"
+        return false
+    }
+}
+
+
+const esApellidoValido = (apellido) => {
+    const regex = /\b([a-zA-ZÀ-ÿ][-,a-z.']*)/
+    let booleanoApellido = regex.test(apellido)
+    if (booleanoApellido) {
+        $errorApellido.innerHTML = ""
+        return true
+    }
+    else {
+        $errorApellido.innerHTML = "El campo apellido solo puede contener texto"
+        return false
+    }
+}
+
+const esDniValido = (dni) => {
+    const regex = /^[0-9]{1,8}$/
+    if (regex.test(dni)){
+        $errorDni.innerHTML = ""
+        return true
+    }
+    else {
+        $errorDni.innerHTML = "El DNI está mal, idiota"
+        return false
+    }}
+
+const esEmailValido = (email) => {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (regex.test(email.toLowerCase())) {
+        $errorEmail.innerHTML = ""
+        return true
+    }
+    else {
+        $errorEmail.innerHTML = "El EMAIL está mal, idiota"
+        return false
+    }}
+
+
+
+const esPasswordValida = (password) => {
+    const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm
+    if (regex.test(password)) {
+        $errorPassword.innerHTML = ""
+        return true
+    }
+    else {
+        $errorPassword.innerHTML = "Poné una password buena"
+        return false
+    }
+}
+
+const repeatPasswordOk = () => {
+    if ($repeatPassword.value === $password.value) {
+        $errorRepeatPassword.innerHTML = ''
+        return true
+    }
+    else {
+        $errorRepeatPassword.innerHTML = 'Las password no coinciden, gilipollas'
+        return false
+    }
+}
+
+const aceptaTerminos = () => {
+    if ($terms.checked) {
+        $errorTerms.innerHTML = ''
+        return true
+    }
+    else {
+        $errorTerms.innerHTML = 'ACEPTÁ LOS TÉRMINOS, LOKOH'
+        return false
+    }
+}
+
+
+// eventos
+
+$btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    esNombreValido($nombre.value)
+    esApellidoValido($apellido.value) 
+    esDniValido($dni.value) 
+    esEmailValido($email.value) 
+    esPasswordValida($password.value) 
+    repeatPasswordOk($repeatPassword.value) 
+    aceptaTerminos()
+    if (esNombreValido($nombre.value) && esApellidoValido($apellido.value) && esDniValido($dni.value) && esEmailValido($email.value) && esPasswordValida($password.value) && repeatPasswordOk($repeatPassword.value) && aceptaTerminos()) {
+        alert('Te registraste bien. Costó, eh, salame')
+        $("form").reset()}
+    else {
+        alert('Cualquier cosa, chicas. Siga participando')
+    }
+})
+
+
+
+
+
+
